@@ -1,0 +1,93 @@
+/* Bluvia Fresh — hoja de estilo del sitio legal.
+   Paleta tomada del producto: acero de la olla, cobre del asa, azul del agua filtrada. */
+:root {
+  --tinta:      #14181d;
+  --tinta-sueve:#414b57;
+  --papel:      #f7f6f3;
+  --superficie: #ffffff;
+  --linea:      #dcd8d0;
+  --acento:     #0f5c74;  /* azul agua */
+  --acento-2:   #a2582c;  /* cobre */
+  --realce:     #eef3f4;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --tinta:      #eceff2;
+    --tinta-sueve:#a3adb9;
+    --papel:      #15181b;
+    --superficie: #1c2024;
+    --linea:      #2f353b;
+    --acento:     #6fc3d8;
+    --acento-2:   #e0996a;
+    --realce:     #202a2e;
+  }
+}
+:root[data-theme="dark"] {
+  --tinta:#eceff2; --tinta-sueve:#a3adb9; --papel:#15181b; --superficie:#1c2024;
+  --linea:#2f353b; --acento:#6fc3d8; --acento-2:#e0996a; --realce:#202a2e;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font: 400 17px/1.65 ui-serif, Georgia, "Times New Roman", serif;
+  -webkit-text-size-adjust: 100%;
+}
+.cinta {
+  background: var(--superficie);
+  border-bottom: 1px solid var(--linea);
+  padding: 18px 0;
+}
+.caja { width: min(72ch, calc(100% - 2.5rem)); margin-inline: auto; }
+.marca {
+  display: flex; align-items: baseline; gap: .6rem;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 700; font-size: 1.05rem; letter-spacing: -.01em;
+  color: var(--tinta); text-decoration: none;
+}
+.marca span { font-weight: 400; font-size: .8rem; color: var(--tinta-sueve); letter-spacing: .04em; text-transform: uppercase; }
+main { padding: 3rem 0 4.5rem; }
+h1 {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(1.85rem, 1.2rem + 2.2vw, 2.6rem);
+  line-height: 1.12; letter-spacing: -.022em; text-wrap: balance; margin: 0 0 .5rem;
+}
+.vigencia {
+  font-family: ui-sans-serif, system-ui, sans-serif; font-size: .82rem;
+  color: var(--tinta-sueve); text-transform: uppercase; letter-spacing: .08em;
+  margin: 0 0 2.5rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--acento);
+}
+h2 {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.22rem; letter-spacing: -.012em; margin: 2.8rem 0 .7rem; text-wrap: balance;
+}
+h3 { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 1.02rem; margin: 1.8rem 0 .5rem; }
+p, li { color: var(--tinta); }
+p { margin: 0 0 1.05rem; }
+ul, ol { margin: 0 0 1.15rem; padding-left: 1.35rem; }
+li { margin-bottom: .45rem; }
+a { color: var(--acento); text-underline-offset: .18em; }
+strong { font-weight: 700; }
+hr { border: 0; border-top: 1px solid var(--linea); margin: 2.5rem 0; }
+blockquote, .destacado {
+  margin: 1.6rem 0; padding: 1.15rem 1.35rem;
+  background: var(--realce); border-left: 3px solid var(--acento-2);
+  border-radius: 0 4px 4px 0;
+}
+.destacado p:last-child, blockquote p:last-child { margin-bottom: 0; }
+table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .94rem; }
+th, td { text-align: left; padding: .65rem .8rem; border-bottom: 1px solid var(--linea); vertical-align: top; }
+th { font-family: ui-sans-serif, system-ui, sans-serif; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--tinta-sueve); }
+.tabla-scroll { overflow-x: auto; }
+code { font-size: .92em; background: var(--realce); padding: .12em .35em; border-radius: 3px; }
+footer {
+  border-top: 1px solid var(--linea); background: var(--superficie);
+  padding: 2rem 0; font-family: ui-sans-serif, system-ui, sans-serif; font-size: .88rem;
+  color: var(--tinta-sueve);
+}
+footer a { color: var(--tinta-sueve); }
+.enlaces-pie { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-bottom: .9rem; }
+a:focus-visible, :focus-visible { outline: 2px solid var(--acento); outline-offset: 3px; border-radius: 2px; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

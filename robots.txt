@@ -1,0 +1,5 @@
+# Meta valida las URLs de politica de privacidad con sus propios crawlers.
+# Bloquear facebookexternalhit hace que Meta trate el enlace como roto,
+# y un enlace de politica roto es una infraccion sujeta a enforcement.
+User-agent: *
+Allow: /
