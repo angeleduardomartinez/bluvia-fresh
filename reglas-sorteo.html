@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bases del sorteo — Bluvia Fresh</title>
-<meta name="description" content="Reglas oficiales del sorteo mensual de un set de utensilios de cocina de Bluvia Fresh.">
+<title>Bases de la promoción — Bluvia Fresh</title>
+<meta name="description" content="Bases y condiciones de la promoción de Bluvia Fresh: cómo participar y cómo se entrega el regalo.">
 <link rel="stylesheet" href="estilo.css">
 <style>
-  /* California B&P 17539.15(d): el aviso de "no se requiere compra" debe ir en párrafo
-     aparte, en mayúsculas y en tipografía no menor que la mayor usada en el resto. */
+  /* Cal. B&P 17539.15(d): el aviso de "no se requiere compra" va en párrafo aparte,
+     en mayúsculas y en tipografía no menor que la mayor usada en el resto del texto. */
   .sin-compra {
     margin: 2rem 0;
     padding: 1.4rem 1.5rem;
@@ -22,6 +22,19 @@
     text-transform: uppercase;
     letter-spacing: .01em;
   }
+  .pasos { counter-reset: paso; list-style: none; padding-left: 0; }
+  .pasos li {
+    counter-increment: paso; position: relative;
+    padding-left: 2.6rem; margin-bottom: 1rem;
+  }
+  .pasos li::before {
+    content: counter(paso); position: absolute; left: 0; top: .05em;
+    width: 1.8rem; height: 1.8rem; border-radius: 50%;
+    background: var(--acento); color: #fff;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: .95rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
 </style>
 </head>
 <body>
@@ -32,100 +45,93 @@
 </header>
 
 <main class="caja">
-  <h1>Bases y reglas oficiales del sorteo</h1>
+  <h1>Bases de la promoción</h1>
   <p class="vigencia">Vigente desde el 2 de septiembre de 2026</p>
 
-  <p class="sin-compra">No es necesaria ninguna compra ni pago para participar o ganar. Una compra no
-  aumenta tus probabilidades de ganar.</p>
+  <p class="sin-compra">No es necesaria ninguna compra ni pago para participar ni para recibir el
+  regalo. Comprar no es requisito y no cambia lo que recibes.</p>
 
-  <h2>1. Quién organiza el sorteo y a qué nos dedicamos</h2>
-  <p>El sorteo lo organiza y administra <strong>Kaizen Group Corp</strong>, que opera bajo el nombre
-  comercial Bluvia Fresh, con domicilio en el estado de California, Estados Unidos. Puedes
-  contactarnos en <a href="mailto:angel@lazos.co">angel@lazos.co</a>.</p>
+  <h2>1. Quién organiza la promoción y a qué nos dedicamos</h2>
+  <p>La promoción la organiza <strong>Kaizen Group Corp</strong>, que opera bajo el nombre comercial
+  Bluvia Fresh, con domicilio en San Diego, California, Estados Unidos. Puedes contactarnos en
+  <a href="mailto:angel@lazos.co">angel@lazos.co</a>.</p>
   <p><strong>A qué nos dedicamos:</strong> somos distribuidores independientes autorizados de
   Hy Cite Enterprises, LLC, y vendemos productos para el hogar de la marca Royal Prestige® —ollas y
   utensilios de cocina, extractores de jugo y sistemas de filtración de agua— mediante demostraciones
-  personales. Este sorteo es una actividad promocional nuestra: sirve para darnos a conocer y para
-  presentar nuestros productos a quienes participan. Lo decimos desde el principio para que sepas
-  exactamente con quién estás tratando y por qué te vamos a contactar.</p>
+  personales.</p>
+  <p><strong>Para qué existe esta promoción:</strong> para darnos a conocer y poder mostrarte nuestros
+  productos. El regalo es nuestra forma de agradecerte el tiempo que nos dedicas. Lo decimos desde el
+  principio para que sepas exactamente con quién estás tratando y por qué te vamos a contactar.</p>
 
   <h2>2. Quién puede participar</h2>
   <ul>
-    <li>Personas de <strong>18 años o más</strong> al momento de participar.</li>
-    <li>Residentes legales del estado de <strong>California, Estados Unidos</strong>.</li>
-    <li>No pueden participar los empleados de Kaizen Group Corp, sus distribuidores asociados, ni sus
-    familiares directos o personas que vivan en el mismo domicilio.</li>
+    <li>Personas de <strong>18 años o más</strong>.</li>
+    <li>Residentes del estado de <strong>California, Estados Unidos</strong>, dentro de las zonas donde
+    tenemos cobertura para hacer demostraciones a domicilio.</li>
+    <li>No participan los empleados de Kaizen Group Corp, sus distribuidores asociados, ni sus
+    familiares directos o quienes vivan en el mismo domicilio.</li>
   </ul>
 
-  <h2>3. Cómo se participa</h2>
-  <p>Completa el formulario que aparece en nuestros anuncios de Facebook o Instagram con tu nombre,
-  teléfono, correo electrónico, código postal y ciudad. Eso es todo: no hay que comprar nada, ni pagar,
-  ni asistir a ninguna presentación para entrar al sorteo.</p>
-  <p>Se admite <strong>una sola participación por persona por periodo</strong>. Si detectamos
-  participaciones duplicadas del mismo teléfono o correo, contamos únicamente la primera.</p>
-  <p>No pedimos ni premiamos que compartas, republiques o etiquetes a nadie. Hacerlo no aumenta tus
-  probabilidades.</p>
+  <h2>3. Cómo funciona, paso a paso</h2>
+  <ol class="pasos">
+    <li>Completas el formulario del anuncio con tu nombre, teléfono, correo, ciudad y código postal.</li>
+    <li>Te contactamos por teléfono, mensaje de texto o WhatsApp para saludarte y coordinar una fecha.</li>
+    <li>Agendamos una demostración de nuestros productos en tu casa, en el horario que a ti te acomode.
+    Dura aproximadamente una hora.</li>
+    <li><strong>Recibes tu regalo el día de la demostración</strong>, en persona y sin costo. No tienes
+    que comprar nada para quedártelo.</li>
+  </ol>
+  <div class="destacado">
+    <p><strong>La única condición para recibir el regalo</strong> es que nos recibas para la
+    demostración y que estés presente durante ella. No hay que comprar, ni firmar, ni pagar nada. Si
+    después de la demostración decides no comprar, el regalo es tuyo igual.</p>
+  </div>
 
-  <h2>4. El premio</h2>
-  <p>Se entrega <strong>un (1) set de utensilios de cocina</strong> por periodo de sorteo. El valor
-  aproximado al por menor del premio se indica en el anuncio correspondiente a cada periodo.</p>
-  <p>El premio es personal e intransferible, no es canjeable por dinero en efectivo y no puede
-  cambiarse por otro producto. Si por causas ajenas a nosotros el premio no estuviera disponible,
-  entregaremos uno de valor igual o superior.</p>
-  <p>Los impuestos que puedan derivarse de recibir el premio corren por cuenta de quien lo gana. Si el
-  valor lo requiere, podremos solicitar los datos fiscales necesarios para cumplir con la ley antes de
-  hacer la entrega.</p>
+  <h2>4. El regalo</h2>
+  <p>Se entrega <strong>un (1) regalo por hogar</strong>. El artículo concreto y su valor aproximado se
+  indican en el anuncio con el que participaste, y te lo confirmamos al agendar la cita.</p>
+  <p>El regalo es personal e intransferible y no es canjeable por dinero en efectivo. Si el artículo
+  anunciado no estuviera disponible, entregamos uno equivalente o de mayor valor, avisándote antes de
+  la cita.</p>
+  <p>Los impuestos que puedan derivarse de recibir el regalo corren por cuenta de quien lo recibe.</p>
 
-  <h2>5. Cuándo y cómo se elige a la ganadora</h2>
-  <p>Cada periodo de sorteo abarca un mes natural y cierra a las 11:59 p.m., hora del Pacífico, del
-  último día del mes. La selección se realiza <strong>al azar</strong> entre todas las participaciones
-  válidas recibidas en ese periodo, dentro de los cinco (5) días hábiles siguientes al cierre.</p>
-  <p>Las probabilidades de ganar dependen del número total de participaciones válidas recibidas
-  durante el periodo.</p>
+  <h2>5. Vigencia y disponibilidad</h2>
+  <p>La promoción está vigente mientras el anuncio correspondiente esté publicado y haya existencias
+  disponibles. Podemos cerrarla en cualquier momento, respetando siempre las citas ya agendadas.</p>
+  <p>Atendemos las solicitudes por orden de llegada y según la disponibilidad de agenda de nuestro
+  equipo en tu zona. Si no tenemos cobertura donde vives, te lo decimos al contactarte.</p>
 
-  <h2>6. Cómo avisamos a quien gana</h2>
-  <p>Contactamos a la persona ganadora por teléfono, mensaje de texto o correo electrónico, usando los
-  datos que dejó en el formulario, dentro de los cinco (5) días hábiles posteriores a la selección.</p>
-  <p>Si no logramos contactarla, o si no responde dentro de los siete (7) días naturales siguientes al
-  primer intento, el premio se declara no reclamado y seleccionamos a otra persona al azar entre las
-  participaciones restantes del mismo periodo.</p>
-  <p>Antes de entregar el premio podemos pedir una identificación válida para confirmar la edad y la
-  residencia.</p>
-
-  <h2>7. Sobre nuestro contacto contigo</h2>
+  <h2>6. Sobre nuestro contacto contigo</h2>
   <div class="destacado">
     <p><strong>Léelo, es importante y no queremos que haya sorpresas.</strong> Un representante de
-    Bluvia Fresh se comunica por teléfono, mensaje de texto o WhatsApp con las personas que participan
-    —<strong>resultes seleccionada o no</strong>— para presentarles nuestros productos de cocina,
-    extractores de jugo y sistemas de filtración de agua.</p>
-    <p><strong>El propósito de ese contacto es comercial:</strong> mostrarte nuestros productos y,
-    si te interesan, ofrecértelos en venta. No es una llamada de entrega de premio.</p>
-    <p>Recibir esa llamada no es requisito para participar ni para ganar, atenderla no mejora tus
-    probabilidades, y no tienes que comprar nada ni asistir a ninguna demostración para entrar al
-    sorteo o para reclamar el premio si resultas ganadora. Si no quieres que te contactemos, responde
-    <strong>ALTO</strong> a cualquier mensaje o dilo durante la llamada, y dejamos de hacerlo de
-    inmediato. Seguirás participando en el sorteo igual.</p>
+    Bluvia Fresh se comunica por teléfono, mensaje de texto o WhatsApp con todas las personas que
+    participan.</p>
+    <p><strong>El propósito de ese contacto es comercial:</strong> agendar la demostración, mostrarte
+    nuestros productos y, si te interesan, ofrecértelos en venta. Durante la demostración recibirás tu
+    regalo, decidas comprar o no.</p>
+    <p>Si en cualquier momento no quieres que te contactemos, responde <strong>ALTO</strong> a cualquier
+    mensaje o dilo durante la llamada, y dejamos de hacerlo de inmediato.</p>
   </div>
   <p>El tratamiento de tus datos se rige por nuestra <a href="privacidad.html">Política de Privacidad</a>.</p>
 
-  <h2>8. Descalificaciones</h2>
-  <p>Podemos descalificar cualquier participación que use datos falsos, suplante la identidad de otra
-  persona, emplee medios automatizados, o intente manipular el sorteo de cualquier forma.</p>
+  <h2>7. Descalificaciones</h2>
+  <p>Podemos descartar una participación que use datos falsos, suplante la identidad de otra persona,
+  emplee medios automatizados, o que repita el registro del mismo hogar para recibir más de un regalo.</p>
 
-  <h2>9. Relación con Meta</h2>
+  <h2>8. Relación con Meta</h2>
   <div class="destacado">
     <p>Esta promoción no está patrocinada, avalada ni administrada por Meta, ni está asociada a Meta
     de ninguna forma. Cada participante libera total y completamente a Meta de cualquier
     responsabilidad relacionada con esta promoción.</p>
-    <p>Meta no recibe ni gestiona tus participaciones. Toda pregunta, comentario o reclamación sobre
-    este sorteo debe dirigirse a Kaizen Group Corp en
+    <p>Meta no recibe ni gestiona tu participación. Toda pregunta, comentario o reclamación sobre esta
+    promoción debe dirigirse a Kaizen Group Corp en
     <a href="mailto:angel@lazos.co">angel@lazos.co</a>, nunca a Meta.</p>
   </div>
 
-  <h2>10. Cambios y ley aplicable</h2>
-  <p>Podemos modificar o cancelar este sorteo si circunstancias fuera de nuestro control lo hacen
-  necesario. Si eso ocurre, publicamos el cambio en esta misma página y respetamos las participaciones
-  ya recibidas.</p>
+  <h2>9. Cambios y ley aplicable</h2>
+  <p>Podemos modificar o terminar esta promoción si circunstancias fuera de nuestro control lo hacen
+  necesario. Si eso ocurre, publicamos el cambio en esta misma página y respetamos las citas ya
+  agendadas.</p>
   <p>Estas bases se rigen por las leyes del estado de California y de los Estados Unidos de América.</p>
 
   <hr>
